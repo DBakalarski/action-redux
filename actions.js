@@ -6,19 +6,19 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT'
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-function addComent(text, id) {
+function addComent(text) {
 	return {
 		type: ADD_COMMENT,
 		text,
-		id
+		id: uuid.v4()
 	}
 }
 
-function editComment(text) {
+function editComment(text, id) {
 	return {
 		type: EDIT_COMMENT,
 		text,
-		id: uuid.v4()
+		id
 	}
 }
 

@@ -27,7 +27,13 @@ function comments(state = [], action) {
 				id: action.id,
 				votes: ++
 			}]
-
+		case THUMB_DOWN_COMMENT:
+			return [{
+				id: action.id,
+				votes: --
+			}]
+		default:
+			return state;
 	}
 
 }
